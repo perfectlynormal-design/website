@@ -1,0 +1,39 @@
+archetypeDir        =   'Post Formats'
+baseURL             =   'https://perfectlynormal.design'
+buildDrafts         =   true    # To seek feedback on posts before they're published.
+buildFuture         =   true    # Same as above
+cleanDestinationDir =   true
+contentDir          =   'Posts'
+disableKinds        =   ['rss', 'section', 'sitemap', 'taxonomy', 'term']
+#disableLiveReload   =   true
+enableEmoji         =   true
+layoutDir           =   'Layouts'
+newContentEditor    =   "subl"
+#pagination
+#params
+#permalinks
+publishDir          =   'Rendered'
+#security
+staticDir           =   'Static'
+
+
+[params]
+    [params.studio]
+        name    =   'Perfectly Normal Design Studios'
+
+
+    [params.contributor]
+		[params.contributor.akshay]
+        	name        =   'Akshay Khobragade'
+            email       =   'akshay@perfectlynormal.design'
+            avatar      =   '/media/avatar_akshay.png'          #TODO
+            avatar-smol =   '/media/avatar-smol_akshay.jpeg'    #TODO
+
+
+[permalinks]
+    '/' =   '/:filename'
+
+
+[security]
+    [security.exec]
+        allow   =   ['subl']

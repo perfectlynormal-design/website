@@ -1,0 +1,14 @@
+image: alpine/latest
+oauth: pages.sr.ht/PAGES:RW
+packages:
+- hugo
+- hut
+sources:
+- https://git.sr.ht/~khobragade/perfectlynormal.design
+tasks:
+- package: |
+    cd perfectlynormal.design
+    hugo
+    tar -C Rendered -cvz . > ../site.tar.gz
+- upload: |
+    hut pages publish -d perfectlynormal.design site.tar.gz
